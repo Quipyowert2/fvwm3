@@ -2291,13 +2291,13 @@ static Bool style_parse_one_style_option(
 						bad = True;
                                         } else {
                                                 f[i] = val[i];
-                                        }       
+                                        }
 				}
 			}
 			if (bad)
 			{
-				fvwm_msg(
-					ERR, "style_parse_one_style_option",
+				fvwm_debug(
+					__func__, "style_parse_one_style_option",
 					"Bad argument to BorderColorsetRegions"
 					": %s", rest);
 				break;
@@ -2353,8 +2353,8 @@ static Bool style_parse_one_style_option(
 			}
 			if (bad)
 			{
-				fvwm_msg(
-					ERR, "style_parse_one_style_option",
+				fvwm_debug(
+					__func__, "style_parse_one_style_option",
 					"Bad argument to HandlesColorsetRegions"
 					": %s", rest);
 				break;
@@ -3043,8 +3043,8 @@ static Bool style_parse_one_style_option(
 			}
 			if (bad)
 			{
-				fvwm_msg(
-					ERR, "style_parse_one_style_option",
+				fvwm_debug(
+					__func__, "style_parse_one_style_option",
 					"Bad argument to HilightBorderColorsetRegions"
 					": %s", rest);
 				break;
@@ -3099,8 +3099,8 @@ static Bool style_parse_one_style_option(
 			}
 			if (bad)
 			{
-				fvwm_msg(
-					ERR, "style_parse_one_style_option",
+				fvwm_debug(
+					__func__, "style_parse_one_style_option",
 					"Bad argument to HilightHandlesColorsetRegions"
 					": %s", rest);
 				break;
@@ -5862,7 +5862,7 @@ void update_window_color_style(FvwmWindow *fw, window_style *pstyle)
 		fw->border_colors_handles_se.back = fw->colors.back;
 	}
 
-}       
+}
 
 void update_window_color_hi_style(FvwmWindow *fw, window_style *pstyle)
 {
